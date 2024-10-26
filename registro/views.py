@@ -1,4 +1,5 @@
 from django.shortcuts import render
+#Importamos ahorita
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
@@ -10,5 +11,7 @@ class SignUpView(CreateView):
     success_url = reverse_lazy("login")
     template_name="registration/signup.html"
 
-class LogoutView(TemplateView):
-    template_name = "logout.html"
+
+def FirstPage(request):
+
+    return render(request,"first_page.html")
